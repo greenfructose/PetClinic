@@ -14,7 +14,7 @@
     </parent>
     <groupId>com.justinturney</groupId>
     <artifactId>PetClinic</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
     <name>PetClinic</name>
     <description>PetClinic</description>
     <properties>
@@ -51,7 +51,7 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/greenfructose/PetClinic.git</developerConnection>
-        <tag>PetClinic-0.0.1</tag>
+        <tag>PetClinic-0.0.2</tag>
     </scm>
 
 </project>
