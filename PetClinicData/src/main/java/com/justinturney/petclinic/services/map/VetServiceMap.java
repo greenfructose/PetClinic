@@ -4,9 +4,11 @@ import com.justinturney.petclinic.model.Pet;
 import com.justinturney.petclinic.model.Vet;
 import com.justinturney.petclinic.services.CrudService;
 import com.justinturney.petclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
