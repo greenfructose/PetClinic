@@ -21,6 +21,13 @@ class OwnerMapServiceTest {
     }
 
     @Test
+    void findByLastNameNotFound() {
+        Owner smith = ownerMapService.findByLastName("foo");
+
+        assertNull(smith);
+    }
+
+    @Test
     void findAll() {
         Set<Owner> ownerSet = ownerMapService.findAll();
 
@@ -74,12 +81,5 @@ class OwnerMapServiceTest {
         assertNotNull(smith);
 
         assertEquals(ownerId, smith.getId());
-    }
-
-    @Test
-    void findByLastNameNotFound() {
-        Owner smith = ownerMapService.findByLastName("foo");
-
-        assertNull(smith);
     }
 }
