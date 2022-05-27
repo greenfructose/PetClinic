@@ -51,6 +51,7 @@ public class PetController {
     public String initCreationForm(Owner owner, Model model) {
         Pet pet = new Pet();
         owner.getPets().add(pet);
+        pet.setOwner(owner);
         model.addAttribute(pet);
         return VIEW_PETS_CREATE_OR_UPDATE_FORM;
     }
@@ -63,8 +64,10 @@ public class PetController {
         owner.getPets().add(pet);
         if (result.hasErrors()) {
             model.addAttribute("pet", pet);
+            pet.setOwner(owner);
             return VIEW_PETS_CREATE_OR_UPDATE_FORM;
         } else {
+            pet.setOwner(owner);
             petService.save(pet);
             return "redirect:/owners/" + owner.getId();
         }
